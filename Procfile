@@ -1,2 +1,1 @@
-web: vite preview --host
-
+web: node server.js
