@@ -28,6 +28,8 @@ const Controller = () => {
         const formData = new FormData();
         formData.append("file", blob, "myFile.wav");
 
+        console.log(process.env.REACT_APP_BACKEND_URL);
+
         // send form data to api endpoint
         await axios.post(`${process.env.REACT_APP_BACKEND_URL}/post-audio`, formData, {
             headers: {

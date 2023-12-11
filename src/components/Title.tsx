@@ -13,7 +13,7 @@ function Title({ setMessages }: Props) {
     setIsResetting(true);
 
     await axios
-      .get("http://localhost:8000/reset", {
+      .get(`${process.env.REACT_APP_BACKEND_URL}/reset`, {
         headers: {
           "Content-Type": "application/json",
         },
